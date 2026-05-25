@@ -10,12 +10,19 @@
 .logo {
     color: #38bdf8;
     font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links a {
@@ -25,6 +32,6 @@
     transition: 0.3s;
 }
 
-.navlinks a:hover {
+.nav-links a:hover {
     color: #38bdf8;
 }
