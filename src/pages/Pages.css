@@ -60,6 +60,33 @@
     transition: 0.3s;
 }
 
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.movie-card {
+    background-color: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-card h3 {
+    margin-top: 15px;
+}
+
 .movie-item:hover {
     transform: scale(1.02);
 }
@@ -69,7 +96,7 @@
     opacity: 0.6;
 }
 
-actions {
+.actions {
     display: flex;
     gap: 10px;
 }

@@ -1,13 +1,24 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import "./Pages.css";
 
 import {FaTrash, FaEdit, FaCheckCircle, FaSave} from "react-icons/fa";
 
 function StreamList() {
     const [movie, setMovie] = useState("");
-    const [movies, setMovies] = useState([]);
+    
+    const [movies, setMovies] = useState(() => {
+        const savedMovies = localStorage.getItem("movies");
+
+        return savedMovies ? JSON.parse(savedMovies) : [];
+    });
+    
     const [editingId, setEditingId] = useState(null);
+    
     const [editText, setEditText] = useState("");
+
+    useEffect(() => {
+        localStorage.setItem("movies", JSON.stringify(movies));
+    }, [movies]);
 
     // Add a Movie
     const handleSubmit = (e) => {
