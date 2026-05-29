@@ -1,3 +1,23 @@
+/* Actions */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button, .movie-item button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actions button:hover {
+    color: #38bdf8;
+}
+
+/* Page */
 .page {
     text-align: center;
     padding: 50px;
@@ -15,6 +35,7 @@
     margin-bottom: 30px;
 }
 
+/* Movie */
 .movie-form {
     display: flex;
     justify-content: center;
@@ -96,20 +117,95 @@
     opacity: 0.6;
 }
 
-.actions {
-    display: flex;
-    gap: 10px;
+.movie-card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #38bdf8;
+    color: white;
+    cursor: pointer;
 }
 
-.actions button, .movie-item button {
+/* Cart */
+.cart-list {
+    max-width: 900px;
+    margin: auto;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.cart-item button {
+    margin-top: 10px;
+    padding: 8px 12px;
     border: none;
-    background: none;
+    border-radius: 8px;
+    background-color: #38bdf8;
     color: white;
-    font-size: 1.1rem;
     cursor: pointer;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Subscriptions */
+.subscription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.subscription-card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
     transition: 0.3s;
 }
 
-.actions button:hover {
-    color: #38bdf8;
+.subscription-card:hover {
+    transform: scale(1.03);
+}
+
+.subscription-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.subscription-card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #38bdf8;
+    color: white;
+    cursor: pointer;
+}
+
+.warning {
+    background-color: #ef4444;
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
